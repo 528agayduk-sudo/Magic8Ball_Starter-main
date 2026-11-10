@@ -1,0 +1,379 @@
+/* ==========================================
+   Magic 8 Ball: starter styles
+   Change these colors and fonts to match your theme.
+   ========================================== */
+
+:root {
+  --brand: #3b2a6b;        /* navbar, hero, button */
+  --brand-light: #ece8f6;  /* page background */
+  --accent: #f4b942;       /* step numbers, highlights */
+  --text: #1f1d2b;
+  --font: "Poppins", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--brand-light);
+  color: var(--text);
+}
+
+/* ---------- Navbar ---------- */
+.site-nav {
+  background: var(--brand);
+}
+
+.site-nav .navbar-brand {
+  color: #fff;
+  font-weight: 700;
+}
+
+.nav-tagline {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--brand);
+  color: #fff;
+  padding: 3rem 0 4rem;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+/* ---------- How It Works ---------- */
+.section-title {
+  font-weight: 600;
+}
+
+.step-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* ---------- Main cards ---------- */
+.main-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.btn-ask {
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 10px;
+}
+
+.btn-ask:hover,
+.btn-ask:focus-visible {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.btn-ask:active,
+.btn-ask:focus {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* ---------- Results ---------- */
+.greeting {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.question-out {
+  min-height: 1.5rem;
+  color: #555;
+}
+
+.ball {
+  width: 240px;
+  height: 240px;
+  margin: 1.5rem auto 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #4a4a4a, #111 65%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.window {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #1b2a6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.answer {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+/* ---------- Answer type badges ----------
+   Your innerHTML can use these classes. */
+.answer-type span {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.yes {
+  background: #2e7d32;
+}
+
+.maybe {
+  background: #b26a00;
+}
+
+.no {
+  background: #c62828;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--brand);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- Mockup layout ---------- */
+body {
+  margin: 0;
+  background: #0d5bc7;
+  color: #111;
+}
+
+.site-nav,
+.site-footer {
+  display: none;
+}
+
+.hero {
+  padding: 1rem 0 1.5rem;
+  background: #0d5bc7;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #fff;
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.hero p {
+  display: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+  max-width: none;
+  padding: 1rem;
+  background: #fff;
+}
+
+.panel {
+  min-width: 0;
+  min-height: 420px;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  background: #4c79b2;
+}
+
+.question-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-panel h2,
+.how-it-works-panel h2 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: clamp(1.7rem, 2.8vw, 2.5rem);
+  font-weight: 900;
+}
+
+.form-label {
+  margin: 0.4rem 0 0.5rem;
+  text-align: center;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 800;
+}
+
+.form-control {
+  min-height: 4.5rem;
+  margin-bottom: 1.1rem;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 1rem;
+  background: #86b1e2;
+  font-size: 1.1rem;
+}
+
+.btn-ask {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  border: 2px solid #000;
+  border-radius: 1rem;
+  background: #064eb2;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.btn-ask:hover,
+.btn-ask:focus-visible {
+  background: #083f8e;
+  color: #fff;
+}
+
+.result-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1rem;
+  background: #fff;
+}
+
+.ball {
+  width: min(22vw, 18rem);
+  min-width: 12rem;
+  aspect-ratio: 1;
+  margin: 0;
+  background: radial-gradient(circle at 50% 35%, #4a4141, #111 68%);
+  box-shadow: inset 0 0 0 0.4rem rgba(255, 255, 255, 0.07), 0 0.5rem 1rem #0002;
+}
+
+.window {
+  position: relative;
+  width: 72%;
+  height: 72%;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 0.3rem solid #050d1c;
+  background: #061b38;
+}
+
+.window::before {
+  position: absolute;
+  inset: 25% 5% 0;
+  background: #0d5bc7;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  content: "";
+}
+
+.answer {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+  transform: none;
+}
+
+.answer-type {
+  display: block;
+  width: 100%;
+  padding: 1.1rem 0.5rem;
+  border: 3px solid #000;
+  border-radius: 2rem;
+  background: #064eb2;
+  color: #fff;
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.answer-type.yes {
+  background: #2e7d32;
+}
+
+.answer-type.no {
+  background: #c62828;
+}
+
+.answer-type.maybe {
+  background: #808080;
+}
+
+.how-it-works-panel {
+  padding: 1.5rem 1.25rem;
+}
+
+.how-it-works-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.how-it-works-list li {
+  text-align: center;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 800;
+}
+
+@media (max-width: 850px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    min-height: auto;
+  }
+
+  .result-panel {
+    min-height: 390px;
+  }
+
+  .ball {
+    width: min(65vw, 18rem);
+  }
+
+  .how-it-works-list {
+    gap: 1rem;
+  }
+}

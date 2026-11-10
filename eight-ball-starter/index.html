@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic 8 Ball</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#">Magic 8 Ball</a>
+      <span class="nav-tagline d-none d-sm-inline">Ask anything. Trust the ball.</span>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero text-center">
+    <div class="container">
+      <h1 class="display-5">Ask the Magic 8 Ball</h1>
+      <p class="lead mb-0">Type a yes-or-no question and let the 8 Ball decide.</p>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <section class="panel question-panel">
+      <h2>Your Question</h2>
+
+      <label for="nameInput" class="form-label">Your Name</label>
+      <input type="text" id="nameInput" class="form-control" placeholder="Maya">
+
+      <label for="questionInput" class="form-label">Your yes-or-no Question</label>
+      <input type="text" id="questionInput" class="form-control" placeholder="Will I pass my test?">
+
+      <p id="greeting" class="greeting visually-hidden">Hello!</p>
+      <p id="questionOut" class="question-out visually-hidden">Your question will appear here.</p>
+
+      <button type="button" id="askButton" onclick="askEightBall()" class="btn btn-ask">Ask the 8 Ball</button>
+    </section>
+
+    <section class="panel result-panel text-center" id="results">
+      <div class="ball">
+        <div class="window">
+          <p id="answer" class="answer"></p>
+        </div>
+      </div>
+
+      <div id="answerType" class="answer-type">YES/NO/MAYBE</div>
+    </section>
+
+    <section class="panel how-it-works-panel">
+      <h2>How it works!</h2>
+      <ul class="how-it-works-list">
+        <li>Enter Your Name!</li>
+        <li>Ask The Question</li>
+        <li>Get Your Answer!!</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer py-4 text-center">
+    <div class="container">
+      <p class="m-0">Created by Your Name</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
